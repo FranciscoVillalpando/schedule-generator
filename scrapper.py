@@ -1,14 +1,14 @@
 import scrapy
 
-class OfertaSpider(scrapy.Spider):
-    name = 'Oferta'
+class UDGSpider(scrapy.Spider):
+    name = 'UDG'
 
     def start_requests(self):
         return [scrapy.FormRequest("http://consulta.siiau.udg.mx/wco/sspseca.consulta_oferta",
                                    formdata={'ciclop': '202110', 'cup': 'A'},
-                                   callback=self.primera_pagina)]
+                                   callback=self.first_page)]
 
-    def primera_pagina(self, response):
+    def first_page(self, response):
 
         #only first root table is useful
         #first two rows are headers
