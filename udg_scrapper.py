@@ -1,5 +1,9 @@
 import scrapy
 
+# Scrappes from UDG offer site to get list of courses
+# params needed: ciclop (year cycle) and cup (which campus)
+
+#TODO: Add list of campuses?
 class UDGSpider(scrapy.Spider):
     name = 'UDG'
 
